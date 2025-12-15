@@ -228,58 +228,57 @@
             Send us a few details below and we’ll contact you with a free estimate.
           </p>
 
-          <!-- UPDATED FORM WITH FORMSPREE -->
-          <form 
-            class="contact-form" 
-            id="booking-form" 
-            method="POST" 
-            action="https://formspree.io/f/mrbnddyl"
-          >
-            <input type="hidden" name="_subject" value="New Landscaping Quote Request" />
+         <form
+  class="contact-form"
+  id="booking-form"
+  action="https://formspree.io/f/mrbnddyl"
+  method="POST"
+>
+  <input type="hidden" name="_subject" value="New Landscaping Quote Request" />
 
-            <div class="form-row">
-              <label for="name">Name*</label>
-              <input id="name" name="name" type="text" required />
-            </div>
+  <div class="form-row">
+    <label for="name">Name*</label>
+    <input id="name" name="name" type="text" required />
+  </div>
 
-            <div class="form-row">
-              <label for="phone">Phone*</label>
-              <input id="phone" name="phone" type="tel" required />
-            </div>
+  <div class="form-row">
+    <label for="phone">Phone*</label>
+    <input id="phone" name="phone" type="tel" required />
+  </div>
 
-            <div class="form-row">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" />
-            </div>
+  <div class="form-row">
+    <label for="email">Email*</label>
+    <input id="email" name="email" type="email" required />
+  </div>
 
-            <div class="form-row">
-              <label for="service">Type of project*</label>
-              <select id="service" name="service" required>
-                <option value="">Select a project type</option>
-                <option value="full-yard">Full yard transformation</option>
-                <option value="sod">Sod installation</option>
-                <option value="trees">Tree / palm work</option>
-                <option value="irrigation">Irrigation / drainage</option>
-                <option value="pavers">Pavers / hardscape</option>
-                <option value="cleanup">Cleanup</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
+  <div class="form-row">
+    <label for="service">Type of project*</label>
+    <select id="service" name="service" required>
+      <option value="">Select a project type</option>
+      <option value="full-yard">Full yard transformation</option>
+      <option value="sod">Sod installation</option>
+      <option value="trees">Tree / palm work</option>
+      <option value="irrigation">Irrigation / drainage</option>
+      <option value="pavers">Pavers / hardscape</option>
+      <option value="cleanup">Cleanup</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
 
-            <div class="form-row">
-              <label for="date">Preferred start date</label>
-              <input id="date" name="date" type="date" />
-            </div>
+  <div class="form-row">
+    <label for="date">Preferred start date</label>
+    <input id="date" name="date" type="date" />
+  </div>
 
-            <div class="form-row">
-              <label for="message">Project details</label>
-              <textarea id="message" name="message" rows="4"></textarea>
-            </div>
+  <div class="form-row">
+    <label for="message">Project details</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+  </div>
 
-            <button type="submit" class="btn btn-primary">Submit Request</button>
-            <p class="small">For urgent matters, call (702) 927-8139</p>
-            <p id="form-status" class="small"></p>
-          </form>
+  <button type="submit" class="btn btn-primary">Submit Request</button>
+  <p class="small">For urgent matters, call (702) 927-8139</p>
+</form>
+
         </div>
 
         <!-- INFO SIDEBAR -->
