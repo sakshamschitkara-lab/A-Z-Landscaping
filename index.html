@@ -228,56 +228,57 @@
             Send us a few details below and we’ll contact you with a free estimate.
           </p>
 
-         <form
-  class="contact-form"
-  id="booking-form"
-  action="https://formspree.io/f/mrbnddyl"
-  method="POST"
->
-  <input type="hidden" name="_subject" value="New Landscaping Quote Request" />
+          <!-- DIRECT FORMSPREE POST -->
+          <form
+            class="contact-form"
+            id="booking-form"
+            action="https://formspree.io/f/mrbnddyl"
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="New Landscaping Quote Request" />
 
-  <div class="form-row">
-    <label for="name">Name*</label>
-    <input id="name" name="name" type="text" required />
-  </div>
+            <div class="form-row">
+              <label for="name">Name*</label>
+              <input id="name" name="name" type="text" required />
+            </div>
 
-  <div class="form-row">
-    <label for="phone">Phone*</label>
-    <input id="phone" name="phone" type="tel" required />
-  </div>
+            <div class="form-row">
+              <label for="phone">Phone*</label>
+              <input id="phone" name="phone" type="tel" required />
+            </div>
 
-  <div class="form-row">
-    <label for="email">Email*</label>
-    <input id="email" name="email" type="email" required />
-  </div>
+            <div class="form-row">
+              <label for="email">Email*</label>
+              <input id="email" name="email" type="email" required />
+            </div>
 
-  <div class="form-row">
-    <label for="service">Type of project*</label>
-    <select id="service" name="service" required>
-      <option value="">Select a project type</option>
-      <option value="full-yard">Full yard transformation</option>
-      <option value="sod">Sod installation</option>
-      <option value="trees">Tree / palm work</option>
-      <option value="irrigation">Irrigation / drainage</option>
-      <option value="pavers">Pavers / hardscape</option>
-      <option value="cleanup">Cleanup</option>
-      <option value="other">Other</option>
-    </select>
-  </div>
+            <div class="form-row">
+              <label for="service">Type of project*</label>
+              <select id="service" name="service" required>
+                <option value="">Select a project type</option>
+                <option value="full-yard">Full yard transformation</option>
+                <option value="sod">Sod installation</option>
+                <option value="trees">Tree / palm work</option>
+                <option value="irrigation">Irrigation / drainage</option>
+                <option value="pavers">Pavers / hardscape</option>
+                <option value="cleanup">Cleanup</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
 
-  <div class="form-row">
-    <label for="date">Preferred start date</label>
-    <input id="date" name="date" type="date" />
-  </div>
+            <div class="form-row">
+              <label for="date">Preferred start date</label>
+              <input id="date" name="date" type="date" />
+            </div>
 
-  <div class="form-row">
-    <label for="message">Project details</label>
-    <textarea id="message" name="message" rows="4" required></textarea>
-  </div>
+            <div class="form-row">
+              <label for="message">Project details</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
 
-  <button type="submit" class="btn btn-primary">Submit Request</button>
-  <p class="small">For urgent matters, call (702) 927-8139</p>
-</form>
+            <button type="submit" class="btn btn-primary">Submit Request</button>
+            <p class="small">For urgent matters, call (702) 927-8139</p>
+          </form>
 
         </div>
 
@@ -294,7 +295,7 @@
           </p>
           <p>
             Phone: <a href="tel:+17029278139">(702) 927-8139</a><br />
-            Hours: Mon–Fri, 7 AM – 5 PM
+            Hours: Mon–Fri, 7 AM – 5:00 PM
           </p>
         </aside>
 
@@ -310,37 +311,12 @@
     </div>
   </footer>
 
-  <!-- UPDATED JS FOR FORMSPREE -->
   <script>
-    // Set footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    const form = document.getElementById('booking-form');
-    const statusEl = document.getElementById('form-status');
-
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
-      statusEl.textContent = "Sending your request...";
-
-      const formData = new FormData(form);
-
-      try {
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        });
-
-        if (response.ok) {
-          statusEl.textContent = "Thanks! Your request has been sent. We'll contact you shortly.";
-          form.reset();
-        } else {
-          statusEl.textContent = "Something went wrong. Please try again or call (702) 927-8139.";
-        }
-      } catch (error) {
-        statusEl.textContent = "Network error. Please call (702) 927-8139.";
-      }
-    });
+    // Just keep the year logic, nothing else
+    const yearEl = document.getElementById('year');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
   </script>
 
 </body>
